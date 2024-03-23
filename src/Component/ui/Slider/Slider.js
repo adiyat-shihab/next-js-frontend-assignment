@@ -4,7 +4,7 @@ import Heading from "@/Component/ui/heading/Heading";
 import Image from "next/image";
 
 const Slider = () => {
-  const [slider, setSlider] = useState(true);
+  const [slider, setSlider] = useState(false);
   const sliderTabs = [
     "Discussion Forum",
     "Market Stories",
@@ -18,11 +18,11 @@ const Slider = () => {
   return (
     <div className={"flex items-center"}>
       <div
-        className={`bg-primary h-screen text-white px-8 w-[21rem] ${
+        className={`bg-primary h-screen text-white  w-[21rem] ${
           slider || "hidden"
         } `}
       >
-        <div className={"flex items-center py-6  justify-between"}>
+        <div className={"flex items-center py-6 px-8  justify-between"}>
           <div className={"flex items-center gap-2"}>
             <Heading title="Hello, User" image={"/person.svg"} />
           </div>
@@ -40,14 +40,14 @@ const Slider = () => {
 
         <hr className={"-mx-8  bg-gray-200 "} />
         {/* other tabs*/}
-        <div className={"py-6 space-y-4"}>
+        <div className={"py-6 "}>
           {sliderTabs.map((tab, index) => (
             <div
               key={index}
-              className={`${
+              className={` hover:bg-[#152744FF] cursor-pointer transition duration-200 py-4 px-8 ${
                 tab === "Discussion Forum" ||
                 tab === "Market Stories" ||
-                "pl-10"
+                "pl-[72px]"
               }`}
             >
               <Heading
@@ -65,7 +65,7 @@ const Slider = () => {
 
       {/*slider button*/}
       <div
-        className="bg-primary py-12 cursor-pointer  "
+        className="bg-primary py-12 cursor-pointer hover:bg-[#152744FF]  "
         onClick={() => setSlider(!slider)}
       >
         <svg
