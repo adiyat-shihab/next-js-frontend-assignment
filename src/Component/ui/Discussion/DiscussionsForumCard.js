@@ -5,7 +5,7 @@ const DiscussionsForumCard = ({ data }) => {
   const { username, forum_details, reacts, comments, views, share, time_ago } =
     data;
   return (
-    <div className={"shadow rounded-md w-[40rem] px-3"}>
+    <div className={"shadow rounded-md lg:w-[30rem] xl:w-[40rem]  px-3"}>
       <div className={"flex justify-between items-center pt-2"}>
         <div className={"flex  gap-4 items-center"}>
           <Image
@@ -25,12 +25,12 @@ const DiscussionsForumCard = ({ data }) => {
       <Heading title={forum_details} style={"py-4 px-16"} />
       <div className={"px-16 flex items-center justify-between pb-2"}>
         <Heading title={reacts} image={"/forum/heart.svg"} style={"text-xs"} />
+        <Heading title={views} image={"/forum/eye.svg"} style={"text-xs"} />
         <Heading
           title={comments}
           image={"/forum/message.svg"}
           style={"text-xs"}
         />
-        <Heading title={views} image={"/forum/eye.svg"} style={"text-xs"} />
         <Heading title={share} image={"/forum/share.svg"} style={"text-xs"} />
       </div>
     </div>

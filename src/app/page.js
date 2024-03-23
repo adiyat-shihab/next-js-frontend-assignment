@@ -3,9 +3,9 @@ import HomePage from "@/Component/HomePage/HomePage";
 
 export default function Home() {
   return (
-    <div className={"h-screen flex items-center "}>
+    <div className={"h-screen  flex items-center 2xl:gap-28 "}>
       <Slider />
-      <div className={"px-8"}>
+      <div className={"xl:px-16 lg:px-4"}>
         <HomePage />
       </div>
     </div>
