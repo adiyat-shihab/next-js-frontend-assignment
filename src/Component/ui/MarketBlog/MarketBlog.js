@@ -8,6 +8,7 @@ const MarketBlog = ({ data }) => {
     <div className={" lg:w-[12.265rem] xl:w-[15.265rem]"}>
       <Image
         src={"/market-card.jpg"}
+        priority={true}
         width={300}
         height={150}
         alt={"blog image"}

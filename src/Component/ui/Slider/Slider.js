@@ -17,14 +17,10 @@ const Slider = () => {
   ];
   return (
     <div className={"relative "}>
-      <div
-        className={`flex items-center absolute  ${
-          slider ? "top-1/3 lg:top-1/2" : " top-1/2"
-        } lg:relative  `}
-      >
+      <div className={`flex items-center `}>
         {/*main slider*/}
         <div
-          className={`bg-primary h-screen text-white lg:w-[16rem]  xl:w-[21rem] ${
+          className={`bg-primary  lg:h-screen text-white lg:w-[16rem]  xl:w-[21rem] ${
             slider || "hidden"
           } `}
         >
@@ -46,7 +42,7 @@ const Slider = () => {
             </svg>
           </div>
 
-          <hr className={"xl:-mx-8   bg-gray-200 "} />
+          <hr className={"   bg-gray-200 "} />
           {/* other tabs*/}
           <div className={"py-6 "}>
             {sliderTabs.map((tab, index) => (
